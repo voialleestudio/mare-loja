@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maré — Projeto conceito Voialle Estúdio</title>
+<meta name="description" content="Projeto conceito de loja virtual de moda, com vitrine por categorias, tamanhos, sacola e finalização de compra. Criado pela Voialle Estúdio.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ec;--card:#fbfaf7;--ink:#161616;--muted:#6b6862;--sea:#2f5d62;--sand:#e4ddd0;--line:#dcd6cb;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}
+.c{width:min(1200px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
+.vb{background:#101010;color:#f6f0e7;font-size:13px;padding:9px 16px;display:flex;justify-content:center;gap:10px 16px;flex-wrap:wrap;text-align:center}
+.vb b{color:#d5b477;font-weight:600;letter-spacing:.08em}.vb a{color:#d5b477;text-decoration:underline}
+.ann{background:var(--sea);color:#eef4f3;text-align:center;font-size:.8rem;letter-spacing:.12em;padding:8px 16px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:30;background:rgba(243,241,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:68px;gap:12px}
+.nl{display:flex;gap:22px;font-size:.9rem;color:var(--muted)}.nl a:hover{color:var(--ink)}
+.logo{font:400 2rem/1 "DM Serif Display",serif;letter-spacing:.02em;justify-self:center}
+.bag{justify-self:end;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--ink);background:transparent;font-weight:500;font-size:.9rem}
+.bag b{min-width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:.75rem;display:grid;place-items:center}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-bottom:1px solid var(--line)}
+.hl{padding:clamp(32px,6vw,80px);display:flex;flex-direction:column;justify-content:center}
+.k{font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sea);font-weight:600}
+h1,h2,h3{font-family:"DM Serif Display",serif;font-weight:400;line-height:1.02}
+h1{font-size:clamp(3rem,7vw,5.6rem);margin:16px 0 18px}h1 i{color:var(--sea)}
+.hl p{color:var(--muted);max-width:420px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;background:var(--ink);color:var(--bg);border:1px solid var(--ink);font-weight:500;letter-spacing:.06em;font-size:.88rem;text-transform:uppercase;transition:.25s;margin-top:28px;width:max-content}
+.btn:hover{background:var(--sea);border-color:var(--sea)}
+.hr{background:linear-gradient(160deg,#cfd9d5,#2f5d62);position:relative;overflow:hidden;display:grid;place-items:center}
+.hr svg{width:min(70%,360px);height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.25))}
+.hr span{position:absolute;bottom:22px;right:24px;color:#eef4f3;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:40px 0 22px}
+.bar h2{font-size:2.4rem}
+.fl{display:flex;gap:8px;flex-wrap:wrap}.fl button{min-height:42px;padding:0 18px;border:1px solid var(--line);background:transparent;border-radius:999px;font-size:.88rem;transition:.2s}
+.fl button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 18px;padding-bottom:70px}
+.pc{display:flex;flex-direction:column}
+.ph{aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden;transition:.3s}
+.ph svg{width:62%;height:auto;transition:transform .5s}.pc:hover .ph svg{transform:scale(1.06) rotate(-2deg)}
+.nw{position:absolute;top:12px;left:12px;background:var(--card);font-size:.7rem;letter-spacing:.14em;padding:4px 10px;text-transform:uppercase}
+.pc h3{font:500 1rem/1.3 Outfit,sans-serif;margin-top:12px}.pc .pr{color:var(--muted);font-size:.92rem}
+.sz{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.sz button{min-width:40px;min-height:40px;border:1px solid var(--line);background:transparent;font-size:.8rem}.sz button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.add{margin-top:10px;min-height:44px;border:1px solid var(--ink);background:transparent;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;transition:.2s}.add:hover{background:var(--ink);color:var(--bg)}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.perks div{padding:28px;border-right:1px solid var(--line)}.perks div:last-child{border:0}.perks b{display:block;font:400 1.4rem "DM Serif Display",serif}.perks span{color:var(--muted);font-size:.9rem}
+.ov{position:fixed;inset:0;background:rgba(10,10,10,.45);z-index:50;opacity:0;pointer-events:none;transition:.3s}.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--card);z-index:60;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.dr.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line)}.dh h2{font-size:1.8rem}
+.x{width:44px;height:44px;border:1px solid var(--line);background:transparent;border-radius:50%;font-size:1.05rem}
+.db{flex:1;overflow:auto;padding:8px 22px}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.li .ph{width:64px;aspect-ratio:4/5}.li .ph svg{width:70%}.li small{display:block;color:var(--muted)}
+.qt{display:flex;align-items:center;gap:8px;margin-top:4px}.qt button{width:30px;height:30px;border:1px solid var(--line);background:transparent;border-radius:50%}
+.df{padding:20px 22px;border-top:1px solid var(--line)}.row{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;margin-bottom:6px}.row.t{color:var(--ink);font-weight:600;font-size:1.1rem}
+.prog{height:4px;background:var(--sand);margin:8px 0 14px}.prog i{display:block;height:100%;background:var(--sea);transition:width .4s}
+.df .btn{width:100%;margin-top:12px}.df .btn:disabled{opacity:.4;cursor:not-allowed}
+.emp{color:var(--muted);padding:30px 0;text-align:center}
+.ok{padding:40px 10px;text-align:center}.ok h3{font-size:2rem;margin:14px 0 8px}.ok p{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:12px 20px;font-size:.88rem;opacity:0;transition:.3s;z-index:70;pointer-events:none;max-width:calc(100% - 32px)}.toast.on{opacity:1;transform:translate(-50%,0)}
+footer{padding:40px 0;color:var(--muted);font-size:.88rem}footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hr{min-height:320px}.grid{grid-template-columns:1fr 1fr}.nl{display:none}nav{grid-template-columns:auto 1fr}.logo{justify-self:start}.perks{grid-template-columns:1fr}.perks div{border-right:0;border-bottom:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="vb"><span><b>PROJETO CONCEITO</b> · Loja fictícia criada pela Voialle Estúdio. Nenhuma compra é cobrada.</span><a href="/#contato">Quero um site assim</a></div>
+<div class="ann">Frete grátis acima de R$ 299 · Troca fácil em 30 dias</div>
+<header><nav class="c"><div class="nl"><a href="#vitrine" data-f="fem">Feminino</a><a href="#vitrine" data-f="mas">Masculino</a><a href="#vitrine" data-f="ace">Acessórios</a></div><a class="logo" href="#">Maré</a><button class="bag" id="ob" type="button" aria-label="Abrir sacola">Sacola <b id="bc">0</b></button></nav></header>
+<main>
+<section class="hero">
+<div class="hl"><div class="k">Coleção Verão</div><h1>Leve como <i>a brisa.</i></h1><p>Linho, algodão e cortes atemporais para dias longos. Peças pensadas para durar e combinar entre si.</p><a class="btn" href="#vitrine">Ver coleção</a></div>
+<div class="hr" role="img" aria-label="Ilustração de um vestido sobre fundo verde-mar"><svg viewBox="0 0 120 150" aria-hidden="true"><path d="M44 6 h32 l4 22 q-6 6-20 6 q-14 0-20-6 Z" fill="#f3f1ec"/><path d="M40 28 q20 10 40 0 l26 112 q-46 12-92 0 Z" fill="#f3f1ec"/><path d="M40 28 q20 10 40 0 l4 18 q-24 8-48 0 Z" fill="#e4ddd0"/></svg><span>Linho natural</span></div>
+</section>
+<div class="c"><div class="bar" id="vitrine"><h2>Vitrine</h2><div class="fl" id="fl" role="group" aria-label="Filtrar por categoria"></div></div>
+<div class="grid" id="grid"></div></div>
+<div class="perks c"><div><b>Pix com 5% off</b><span>Desconto aplicado na finalização</span></div><div><b>Troca fácil</b><span>Até 30 dias após o recebimento</span></div><div><b>Envio para todo o Brasil</b><span>Rastreio pelo WhatsApp</span></div></div>
+</main>
+<footer><div class="c"><span>Maré · loja fictícia · Projeto conceito</span><span>Site desenvolvido por <a href="/" style="color:var(--sea);font-weight:600">Voialle Estúdio</a></span></div></footer>
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Sacola" aria-hidden="true"><div class="dh"><h2>Sacola</h2><button class="x" id="cx" type="button" aria-label="Fechar sacola">✕</button></div><div class="db" id="db"></div><div class="df" id="df"></div></aside>
+<div class="toast" id="ts" role="status"></div>
+<script>
+const SH={dress:'<path d="M44 6 h32 l4 22 q-6 6-20 6 q-14 0-20-6 Z" fill="C"/><path d="M40 28 q20 10 40 0 l26 112 q-46 12-92 0 Z" fill="C"/><path d="M40 28 q20 10 40 0 l4 18 q-24 8-48 0 Z" fill="#000" opacity=".08"/>',
+tee:'<path d="M38 18 l-30 18 l12 22 l14-8 v86 h52 v-86 l14 8 l12-22 l-30-18 q-8 10-22 10 q-14 0-22-10 Z" fill="C"/><path d="M38 18 q8 12 22 12 q14 0 22-12" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="3"/>',
+shirt:'<path d="M40 14 l-30 20 l12 24 l12-8 v88 h52 v-88 l12 8 l12-24 l-30-20 l-20 16 Z" fill="C"/><path d="M60 30 v108" stroke="#000" stroke-opacity=".12" stroke-width="2"/><g fill="#000" fill-opacity=".18"><circle cx="60" cy="50" r="2"/><circle cx="60" cy="70" r="2"/><circle cx="60" cy="90" r="2"/></g>',
+pants:'<path d="M30 8 h60 l8 136 h-28 l-10-96 l-10 96 h-28 Z" fill="C"/><path d="M30 8 h60 v10 h-60 Z" fill="#000" opacity=".1"/>',
+bag:'<path d="M42 44 q0-26 18-26 q18 0 18 26" fill="none" stroke="C" stroke-width="6"/><rect x="22" y="44" width="76" height="80" rx="6" fill="C"/><rect x="22" y="44" width="76" height="14" fill="#000" opacity=".08"/>',
+hat:'<ellipse cx="60" cy="96" rx="56" ry="16" fill="C"/><path d="M30 94 q0-50 30-50 q30 0 30 50 Z" fill="C"/><path d="M30 86 q30 10 60 0 v8 q-30 10-60 0 Z" fill="#000" opacity=".2"/>'};
+const P=[["Vestido Midi Linho","fem","dress","#d9c9ad","#efe8dc",289,1],["Camisa Oxford","mas","shirt","#9fb7c6","#e3eaee",179],["Calça Alfaiataria","fem","pants","#3b3a36","#e2ddd3",239],["Camiseta Essencial","mas","tee","#f1ede5","#d7d1c4",89,1],["Bolsa Couro Caramelo","ace","bag","#a86b3c","#efe2d3",349],["Vestido Verde-Mar","fem","dress","#2f5d62","#d6e1df",319,1],["Calça Linho Areia","mas","pants","#cdbf9f","#ece6da",219],["Chapéu de Palha","ace","hat","#d8bf86","#f1ead9",129]];
+const SZ={fem:["PP","P","M","G"],mas:["P","M","G","GG"],ace:["Único"]};
+const $=s=>document.querySelector(s),R=v=>"R$ "+v.toFixed(2).replace(".",",");
+const svg=(k,col)=>`<svg viewBox="0 0 120 150" aria-hidden="true">${SH[k].replace(/C/g,col)}</svg>`;
+let f="all",bag=[],size={};
+$("#fl").innerHTML=[["all","Todos"],["fem","Feminino"],["mas","Masculino"],["ace","Acessórios"]].map(x=>`<button type="button" data-f="${x[0]}" aria-pressed="${f===x[0]}">${x[1]}</button>`).join("");
+function grid(){$("#grid").innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>f==="all"||p[1]===f).map(([p,i])=>`<article class="pc"><div class="ph" style="background:${p[4]}">${p[6]?'<span class="nw">Novo</span>':""}${svg(p[2],p[3])}</div><h3>${p[0]}</h3><span class="pr">${R(p[5])}</span><div class="sz" role="group" aria-label="Tamanho">${SZ[p[1]].map(s=>`<button type="button" data-s="${i}|${s}" aria-pressed="${size[i]===s}">${s}</button>`).join("")}</div><button class="add" type="button" data-a="${i}">Adicionar à sacola</button></article>`).join("")}
+function setF(v){f=v;document.querySelectorAll("#fl button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));grid()}
+$("#fl").onclick=e=>{const b=e.target.closest("button");if(b)setF(b.dataset.f)};
+document.querySelectorAll(".nl a").forEach(a=>a.addEventListener("click",()=>setF(a.dataset.f)));
+function toast(t){const e=$("#ts");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("on"),2200)}
+$("#grid").onclick=e=>{const s=e.target.closest("[data-s]");if(s){const[i,v]=s.dataset.s.split("|");size[i]=v;grid();return}
+const a=e.target.closest("[data-a]");if(a){const i=+a.dataset.a,p=P[i];if(SZ[p[1]].length>1&&!size[i]){toast("Escolha um tamanho primeiro");return}const sz=size[i]||"Único";const ex=bag.find(b=>b.i===i&&b.s===sz);ex?ex.q++:bag.push({i,s:sz,q:1});renderBag();toast(p[0]+" adicionado à sacola");}};
+const FREE=299;
+function renderBag(){const sub=bag.reduce((t,b)=>t+P[b.i][5]*b.q,0),n=bag.reduce((t,b)=>t+b.q,0),fr=sub>=FREE||!sub?0:24.9;$("#bc").textContent=n;
+$("#db").innerHTML=bag.length?bag.map((b,k)=>{const p=P[b.i];return `<div class="li"><div class="ph" style="background:${p[4]}">${svg(p[2],p[3])}</div><div><b style="font-weight:500">${p[0]}</b><small>Tamanho ${b.s}</small><div class="qt"><button type="button" data-q="${k}" data-d="-1" aria-label="Diminuir">−</button>${b.q}<button type="button" data-q="${k}" data-d="1" aria-label="Aumentar">+</button></div></div><span>${R(p[5]*b.q)}</span></div>`}).join(""):`<p class="emp">Sua sacola está vazia.</p>`;
+$("#df").innerHTML=`<div class="row"><span>${sub>=FREE?"Você ganhou frete grátis!":`Faltam ${R(Math.max(0,FREE-sub))} para frete grátis`}</span></div><div class="prog"><i style="width:${Math.min(100,sub/FREE*100)}%"></i></div><div class="row"><span>Subtotal</span><span>${R(sub)}</span></div><div class="row"><span>Frete</span><span>${fr?R(fr):"Grátis"}</span></div><div class="row t"><span>Total</span><span>${R(sub+fr)}</span></div><div class="row"><span>No Pix (5% off)</span><span>${R((sub+fr)*.95)}</span></div><button class="btn" type="button" id="co"${bag.length?"":" disabled"}>Finalizar compra</button>`}
+function openBag(o){$("#dr").classList.toggle("on",o);$("#ov").classList.toggle("on",o);$("#dr").setAttribute("aria-hidden",!o);if(o)$("#cx").focus()}
+$("#ob").onclick=()=>openBag(true);$("#cx").onclick=()=>openBag(false);$("#ov").onclick=()=>openBag(false);
+addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#dr").classList.contains("on"))openBag(false)});
+$("#dr").addEventListener("click",e=>{const q=e.target.closest("[data-q]");if(q){const b=bag[+q.dataset.q];b.q+= +q.dataset.d;if(b.q<1)bag.splice(+q.dataset.q,1);renderBag();return}
+if(e.target.id==="co"){$("#db").innerHTML=`<div class="ok"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2f5d62" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><h3>Pedido realizado!</h3><p>Demonstração: numa loja real, aqui viriam o pagamento, a confirmação por e-mail e o código de rastreio.</p></div>`;bag=[];$("#bc").textContent=0;$("#df").innerHTML=`<button class="btn" type="button" id="kc" style="width:100%">Continuar comprando</button>`}
+if(e.target.id==="kc"){renderBag();openBag(false)}});
+grid();renderBag();
+</script>
+</body>
+</html>
