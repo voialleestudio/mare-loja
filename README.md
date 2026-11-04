@@ -1,6 +1,6 @@
 # Maré — Fashion Store Concept
 
-**Live demo:** https://voialleestudio.github.io/mare-loja/
+**Live demo:** https://voialleestudio.com.br/exemplos/loja/
 
 A concept e-commerce storefront for a beachwear and fashion brand, designed and built by [VOIALLE Estúdio](https://voialleestudio.com.br).
 
